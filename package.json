@@ -1,0 +1,36 @@
+{
+  "name": "basic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "webpack serve",
+    "start": "webpack serve --open",
+    "build": "webpack"
+  },
+  "keywords": [],
+  "author": "Vinay",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.24.7",
+    "@babel/eslint-parser": "^7.24.7",
+    "@babel/preset-env": "^7.24.7",
+    "@babel/preset-typescript": "^7.24.7",
+    "@eslint/js": "^9.6.0",
+    "babel-loader": "^9.1.3",
+    "css-loader": "^7.1.2",
+    "eslint": "^9.6.0",
+    "eslint-webpack-plugin": "^4.2.0",
+    "file-loader": "^6.2.0",
+    "globals": "^15.8.0",
+    "handlebars-loader": "^1.7.3",
+    "handlebars-webpack-plugin": "^2.2.1",
+    "sass": "^1.77.6",
+    "sass-loader": "^14.2.1",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.92.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4"
+  }
+}
