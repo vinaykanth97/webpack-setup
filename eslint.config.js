@@ -4,4 +4,8 @@ module.exports =
   "parserOptions": {
     "requireConfigFile": false,
   },
+  "ignorePatterns": [
+    "node_modules/*",
+    "dist/*",
+  ],
 }

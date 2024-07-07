@@ -11,4 +11,4 @@ var data = {
 
 };
 document.querySelector('.test').innerHTML = template(data);
-console.log("sad")
+console.log("ss")

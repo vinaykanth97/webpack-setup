@@ -2,7 +2,9 @@ const HandlebarsPlugin = require('handlebars-webpack-plugin')
 const ESLintPlugin = require('eslint-webpack-plugin')
 const path = require('path');
 module.exports = {
-    entry: './app/js/index.js',
+    entry: {
+        app: './src/js/index.js',
+    },
     module: {
         rules: [
             {
@@ -40,6 +42,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'clientlibs/[name].js',
+        clean: true,
     },
     optimization: {
         splitChunks: {
@@ -59,9 +62,9 @@ module.exports = {
             exclude: [`/node_modules/`],
         }),
         new HandlebarsPlugin({
-            entry: path.join(process.cwd(), "app", "views", "pages", "*.hbs"),
+            entry: path.join(process.cwd(), "src", "views", "pages", "*.hbs"),
             output: path.join(process.cwd(), "dist", "[name].html"),
-            partials: [path.join(process.cwd(), "app", "views", "layout", "*.hbs")],
+            partials: [path.join(process.cwd(), "src", "views", "layout", "*.hbs")],
             data: {
                 home: {
                     title: 'Home Page',
@@ -71,10 +74,4 @@ module.exports = {
                 }
             }
         })],
-    mode: 'production',
-    devServer: {
-        static: './dist',
-        watchFiles: ["app/views/**/*.hbs"],
-    },
-
 };
